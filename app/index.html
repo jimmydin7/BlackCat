@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BlackCat Official Page</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@100;400;900&display=swap" rel="stylesheet" />
+
+    <script src="https://cdn.jsdelivr.net/npm/kute.js@2.1.2/dist/kute.min.js"></script>
+
+    <style>
+      h1 {
+        font-size: 4rem;
+      }
+      p {
+        font-size: 1.5rem;
+      }
+      body {
+        margin: 0;
+        font-family: 'Prompt', sans-serif;
+        color: white;
+        background: #202731;
+        overflow-x: hidden;
+      }
+
+      section {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        min-height: 400px;
+        padding-top: 100px;
+      }
+
+      .blue {
+        background: #3c31dd;
+      }
+
+      .red {
+        background: #dd3f31;
+      }
+
+      .pink {
+        background: #ff0066;
+      }
+
+      .dark {
+        background: #0f0f10;
+      }
+
+      /* Curved bg with plain CSS */
+
+      .curve {
+        position: absolute;
+        height: 250px;
+        width: 100%;
+        bottom: 0;
+        text-align: center;
+      }
+
+      .curve::before {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 55%;
+        height: 100%;
+        transform: translate(85%, 60%);
+        background-color: hsl(216, 21%, 16%);
+      }
+
+      .curve::after {
+        content: '';
+        display: block;
+        position: absolute;
+        border-radius: 100% 50%;
+        width: 55%;
+        height: 100%;
+        background-color: #3c31dd;
+        transform: translate(-4%, 40%);
+        z-index: -1;
+      }
+
+      /* Bubble bg with plain CSS */
+
+      .bubble::after {
+        content: '';
+        border-top-left-radius: 50% 100%;
+        border-top-right-radius: 50% 100%;
+        position: absolute;
+        bottom: 0;
+        z-index: -1;
+        width: 100%;
+        background-color: #0f0f10;
+        height: 85%;
+      }
+
+      /* Curved bg with SVG via https://www.shapedivider.app/ */
+
+      .wave {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        overflow: hidden;
+        line-height: 0;
+      }
+
+      .wave svg {
+        position: relative;
+        display: block;
+        width: calc(103% + 1.3px);
+        height: 262px;
+      }
+
+      .wave .shape-fill {
+        fill: hsl(240, 3%, 6%);
+      }
+
+      /* SVG background image via https://haikei.app/ */
+
+      .spacer {
+        aspect-ratio: 960/300;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+      }
+
+      .layer1 {
+        background-image: url('./layer1.svg');
+      }
+    
+
+      /* Custom scrollbar */
+      ::-webkit-scrollbar{
+        width: 15px;
+
+      }
+
+      ::-webkit-scrollbar-track{
+        background: rgb(136, 130, 130);
+
+      }
+
+      ::-webkit-scrollbar-thumb{
+        background: rgb(73, 70, 70);
+        
+
+      }
+
+      /* Download button */
+      .download-link {
+        text-decoration: none;
+      }
+
+      .download-button {
+        background-color: #2196f3;
+        color: white;
+        border-radius: 4px;
+        font-size: 24px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: transform 0.2s ease-in-out;
+        margin-bottom: 40px;
+        padding-right: 20px;
+        padding-left: 20px;
+        
+        
+      }
+
+      .button-container{
+        display: flex;
+        justify-content: center;
+      }
+
+      .download-button:hover {
+        transform: scale(1.05);
+      }
+
+      .download-button:active {
+        transform: scale(0.95);
+      }
+
+      
+      /* Custom selection */
+
+      ::selection{
+        color: rgb(71, 96, 168);
+        background-color: rgb(147, 168, 230);
+      }
+   
+
+
+    </style>
+  </head>
+  <body>
+    <section class="blue">
+      <h1>Welcome to BlackCat</h1>
+      <p>The best chatting app for staying connected with your friends and loved ones.</p>
+      <div class="curve"></div>
+    </section>
+
+    <section>
+      <h1>Why Do People Love Us?</h1>
+      <p>People love us because of our reliable messaging system and easy-to-use interface that keeps them connected.</p>
+    </section>
+
+    <section class="bubble">
+      <h1>Can We Earn Your Trust?</h1>
+      <p>Rest assured that all your chatting data is secure and will remain private with BlackCat.</p>
+    </section>
+
+    <section class="dark">
+      <h1>Get BlackCat Today!</h1>
+      <p>Don't miss out on the best chatting app. Download BlackCat now and stay connected!</p>
+    </section>
+
+    <section class="red">
+      <h1>Join the BlackCat Community!</h1>
+      <p>Connect with your loved ones and make new friends. Download BlackCat today!</p>
+
+      <div class="wave">
+        <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path
+            d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+            class="shape-fill"
+          ></path>
+        </svg>
+      </div>
+    </section>
+
+    <div class="spacer layer1"></div>
+
+    <section>
+      <h1>Where can I download the App?</h1>
+      <p>Click on the download button below to get the best chatting app!</p>
+    </section>
+
+    <div class="button-container">
+      <a download href="BlackCatChat.exe" class="download-link">
+        <button class="download-button">
+          <h2>Download for free now!</h2>
+        </button>
+      </a>
+    </div>
+    
+    
+
+    
+  </body>
+</html>
